@@ -1,19 +1,28 @@
 package br.com.bruno.user;
 
 public class UserNull extends User {
-
-	@Override
-	public String getName() {
-		return "unnamed";
+	
+	boolean isNull(){
+		return true;
 	}
-
-	@Override
-	public int getAge() {
-		return 0;
+	
+	Name getName(){
+		return new nullName();
 	}
-
-	@Override
-	public float getHeight() {
-		return 0;
+	
+	Age getAge(){
+		return new nullAge();
 	}
+	
+	Height getHeight(){
+		return new nullHeight();
+	}
+	
 }
+
+user = (code.user != null)
+	code.user : new NullUser();
+
+name = user.getname();
+age = user.getage();
+height = user.height();
